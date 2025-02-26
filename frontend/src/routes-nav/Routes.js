@@ -6,7 +6,7 @@ import ProfileForm from "../profiles/ProfileForm";
 import SignupForm from "../auth/SignupForm";
 import PrivateRoute from "./PrivateRoute";
 import SpellList from "../spellList/spellList";
-import SpellDetail from "../spellDetails/spellDetails";
+import SpellDetails from "../spellDetails/spellDetails";
 import Favorites from "../favorites/favorites";
 
 function Routes({ login, signup }) {
