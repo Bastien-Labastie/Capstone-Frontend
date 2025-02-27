@@ -7,7 +7,7 @@ import SignupForm from "../auth/SignupForm";
 import PrivateRoute from "./PrivateRoute";
 import SpellList from "../components/spellList";
 import SpellDetails from "../components/spellDetails";
-import Favorites from "../components/favorites";
+import Favorites from "../components/Favorites";
 
 function Routes({ login, signup }) {
   console.debug(
