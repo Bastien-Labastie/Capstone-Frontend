@@ -25,7 +25,7 @@ function LoginForm({ login }) {
     evt.preventDefault();
     let result = await login(formData);
     if (result.success) {
-      history.push("/companies");
+      history.push("/spellList");
     } else {
       setFormErrors(result.errors);
     }
