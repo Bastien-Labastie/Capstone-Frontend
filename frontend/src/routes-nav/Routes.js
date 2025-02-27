@@ -5,9 +5,9 @@ import LoginForm from "../auth/LoginForm";
 import ProfileForm from "../profiles/ProfileForm";
 import SignupForm from "../auth/SignupForm";
 import PrivateRoute from "./PrivateRoute";
-import SpellList from "../components/spellList/spellList";
-import SpellDetails from "../components/spellDetails/spellDetails";
-import Favorites from "../components/favorites/favorites";
+import SpellList from "../components/spellList";
+import SpellDetails from "../components/spellDetails";
+import Favorites from "../components/favorites";
 
 function Routes({ login, signup }) {
   console.debug(
