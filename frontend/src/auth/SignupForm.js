@@ -39,7 +39,7 @@ function SignupForm({ signup }) {
 
   async function handleSubmit(evt) {
     evt.preventDefault();
-    let result = await signup(formData);
+    let result = await register(formData);
     alert ('here');
     if (result.success) {
        alert ('here2');
