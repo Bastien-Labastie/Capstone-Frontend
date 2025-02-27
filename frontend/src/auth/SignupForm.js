@@ -41,7 +41,7 @@ function SignupForm({ signup }) {
     evt.preventDefault();
     let result = await signup(formData);
     if (result.success) {
-      history.push("/companies");
+      history.push("/spellList");
     } else {
       setFormErrors(result.errors);
     }
