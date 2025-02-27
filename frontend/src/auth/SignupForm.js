@@ -42,9 +42,11 @@ function SignupForm({ signup }) {
     let result = await signup(formData);
     alert ('here');
     if (result.success) {
+       alert ('here2');
       history.push("/SpellList");
     } else {
       setFormErrors(result.errors);
+             alert ('here3');
     }
   }
 
