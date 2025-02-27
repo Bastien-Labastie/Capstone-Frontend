@@ -51,6 +51,7 @@ class DnDApi {
   /** Signup for site. */
 
   static async signup(data) {
+    alert("Help");
     let res = await this.request(`auth/register`, data, "post");
     return res.token;
   }
