@@ -50,6 +50,7 @@ function App() {
     try {
       let token = await DnDApi.signup(signupData);
       setToken(token);
+      navigate("/spellList");
       return { success: true };
     } catch (errors) {
       console.error("signup failed", errors);
