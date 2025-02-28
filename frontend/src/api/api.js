@@ -37,6 +37,7 @@ class DnDApi {
   /** Get the current user. */
 
   static async getCurrentUser(username) {
+    console.log("Fetching user for:", username);
     let res = await this.request(`users/${username}`);
     return res.user;
   }
