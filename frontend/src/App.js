@@ -62,8 +62,9 @@ function App() {
   async function login(loginData) {
     try {
       let token = await DnDApi.login(loginData);
+      console.log("Received token:", token);
       setToken(token);
-      history.push("/spellList");
+      console.log("Token after setToken:", token);
       return { success: true };
     } catch (errors) {
       console.error("login failed", errors);
