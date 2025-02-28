@@ -30,6 +30,7 @@ function App() {
           let { username } = jwt.decode(token);
           DnDApi.token = token;
           let currentUser = await DnDApi.getCurrentUser(username);
+          console.log("Fetched User:", currentUser);
           setCurrentUser(currentUser);
         } catch (err) {
           console.error("App loadUserInfo: problem loading", err);
