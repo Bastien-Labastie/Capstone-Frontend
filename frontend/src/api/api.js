@@ -44,6 +44,7 @@ class DnDApi {
   /** Get token for login from username, password. */
 
   static async login(data) {
+    alert("logged");
     let res = await this.request(`auth/token`, data, "post");
     return res.token;
   }
