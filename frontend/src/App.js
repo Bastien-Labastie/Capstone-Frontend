@@ -66,7 +66,6 @@ function App() {
       console.log("Received token:", token);
       setToken(token);
       console.log("Token after setToken:", token);
-      history.push("/spellList");
       return { success: true };
     } catch (errors) {
       console.error("login failed", errors);
