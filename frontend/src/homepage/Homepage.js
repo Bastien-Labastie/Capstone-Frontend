@@ -14,7 +14,7 @@ function Homepage() {
           <p className="lead">All the 5e Spells in one, convenient place.</p>
           {currentUser
               ? <h2>
-                Welcome Back, {currentUser.firstName || currentUser.username}!
+                Welcome Back Adventurer!, {currentUser.firstName || currentUser.username}!
               </h2>
               : (
                   <p>
