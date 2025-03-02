@@ -9,6 +9,8 @@ const SpellDetails = () => {
   const [spell, setSpell] = useState(null);  
   const { id } = useParams();  
   const history = useHistory(); 
+
+  console.log("Fetching spell details for ID:", id);
   
   useEffect(() => {
     // Fetch spell details using the spell index
