@@ -48,6 +48,7 @@ function LoginForm({ login }) {
                 <label>Username</label>
                 <input
                   name="username"
+                  placeholder="Case Sensitive!"
                   className="form-control"
                   value={formData.username}
                   onChange={handleChange}
