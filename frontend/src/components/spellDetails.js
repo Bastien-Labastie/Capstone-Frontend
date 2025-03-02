@@ -27,37 +27,40 @@ const SpellDetails = () => {
   };
 
   return (
-    <div className='spell-details-container'>
-      <div className='spell-details-content'>
-        <div className='spell-details-header'>
-          <h2 className='title'>{spell.name}</h2>
-          <p className='level'>Level: {spell.level}</p>
-          <p className='school'>School: {spell.school.name}</p>
+  <div className="spell-details-container">
+    {spell ? (
+      <div className="spell-details-content">
+        <div className="spell-details-header">
+          <h2 className="title">{spell.name}</h2>
+          <p className="level">Level: {spell.level}</p>
+          <p className="school">School: {spell.school?.name}</p>
         </div>
-        <div className='spell-details-info'>
-          <div className='spell-details-section'>
+        <div className="spell-details-info">
+          <div className="spell-details-section">
             <h2>Description</h2>
-            <p className='description'>{spell.desc}</p>
+            <p className="description">{spell.desc}</p>
           </div>
-          <div className='spell-details-section'>
+          <div className="spell-details-section">
             <h2>Components</h2>
-            <p>{spell.components.join(', ')}</p>
+            <p>{spell.components?.join(", ")}</p>
           </div>
-          <div className='spell-details-section'>
+          <div className="spell-details-section">
             <h2>Range</h2>
             <p>{spell.range}</p>
           </div>
-          <div className='spell-details-section'>
+          <div className="spell-details-section">
             <h2>Duration</h2>
             <p>{spell.duration}</p>
           </div>
-          <button className='go-back-button' onClick={handleGoBack}>
+          <button className="go-back-button" onClick={handleGoBack}>
             Go Back
           </button>
         </div>
       </div>
-    </div>
-  );
-};
+    ) : (
+      <p>Loading spell details...</p>
+    )}
+  </div>
+);
 
 export default SpellDetails;
