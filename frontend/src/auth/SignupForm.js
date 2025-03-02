@@ -40,13 +40,13 @@ function SignupForm({ signup }) {
   async function handleSubmit(evt) {
     evt.preventDefault();
     let result = await signup(formData);
-    alert ('here');
+    console.log('here');
     if (result.success) {
-       alert ('here2');
+      console.log('here2');
       history.push("/SpellList");
     } else {
       setFormErrors(result.errors);
-             alert ('here3');
+            console.log('here3');
     }
   }
 
