@@ -39,7 +39,7 @@ function Routes({ login, signup }) {
           <SpellList />
         </PrivateRoute>
 
-        <PrivateRoute path="/spellDetail/:id">
+        <PrivateRoute path="/spell/:id">
           <SpellDetail />
         </PrivateRoute>
 
