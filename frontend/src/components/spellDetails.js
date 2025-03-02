@@ -62,5 +62,6 @@ const SpellDetails = () => {
     )}
   </div>
 );
+}
 
 export default SpellDetails;
