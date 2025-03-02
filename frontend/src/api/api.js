@@ -45,7 +45,7 @@ class DnDApi {
   /** Get token for login from username, password. */
 
   static async login(data) {
-    alert("logged");
+    console.log("logged");
     let res = await this.request(`auth/token`, data, "post");
     return res.token;
   }
@@ -53,7 +53,7 @@ class DnDApi {
   /** Signup for site. */
 
   static async signup(data) {
-    alert("Help");
+    console.log("Help");
     let res = await this.request(`auth/register`, data, "post");
     return res.token;
   }
