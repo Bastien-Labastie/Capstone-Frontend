@@ -55,7 +55,7 @@ function Navigation({ logout }) {
   return (
       <nav className="Navigation navbar navbar-expand-md">
         <Link className="navbar-brand" to="/">
-          Jobly
+          Home
         </Link>
         {currentUser ? loggedInNav() : loggedOutNav()}
       </nav>
