@@ -61,6 +61,7 @@ class DnDApi {
   /** Save user profile page. */
 
   static async saveProfile(username, data) {
+    console.log(data.password);
     let res = await this.request(`users/${username}`, data, "patch");
     return res.user;
   }
