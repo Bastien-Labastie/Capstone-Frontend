@@ -5,16 +5,26 @@ const AppContext = createContext(null);
 
 export const useAppContext = () => {
   const context = useContext(AppContext);
-
   if (!context) {
     throw new Error("AppContext must be used within AppContextProvider!");
   }
-
   return context;
 };
 
 const AppContextProvider = ({ children }) => {
   const [favorites, setFavorites] = useState([]);
+
+  useEffect(() => {
+    const savedFavorites = JSON.parse(localStorage.getItem("favorites"));
+    if (savedFavorites) {
+      setFavorites(savedFavorites);
+    }
+  }, []);
+
+  // 🔹 Save favorites to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  }, [favorites]);
 
   /**
    * Adds a spell to the favorites list.
