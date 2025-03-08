@@ -8,6 +8,7 @@ import PrivateRoute from "./PrivateRoute";
 import SpellList from "../components/spellList";
 import SpellDetail from "../components/spellDetails";
 import Favorites from "../components/Favorites";
+import NotFound from "../components/notFound";
 
 function Routes({ login, signup }) {
   console.debug(
@@ -47,7 +48,9 @@ function Routes({ login, signup }) {
           <Favorites />
         </PrivateRoute>
 
-        <Redirect to="/" />
+        <Route>
+          <NotFound />
+        </Route>
       </Switch>
     </div>
   );
